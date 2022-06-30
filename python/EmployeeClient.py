@@ -2,8 +2,10 @@ from __future__ import print_function
 import logging
 
 import grpc
-import employee_service_pb2
-import employee_service_pb2_grpc
+import EmployeeService_pb2
+import EmployeeService_pb2_grpc
+
+import const
 
 def run():
     with grpc.insecure_channel(const.IP+':'+const.PORT) as channel:

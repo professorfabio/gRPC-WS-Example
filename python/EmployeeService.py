@@ -1,7 +1,7 @@
 import grpc
 
-import employee_service_pb2
-import employee_service_pb2_grpc
+import EmployeeService_pb2
+import EmployeeService_pb2_grpc
 
 empDB=[
  {
