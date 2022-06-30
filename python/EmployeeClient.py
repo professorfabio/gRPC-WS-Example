@@ -9,22 +9,22 @@ import const
 
 def run():
     with grpc.insecure_channel(const.IP+':'+const.PORT) as channel:
-        stub = employee_service_pb2_grpc.EmployeeStub(channel)
+        stub = EmployeeService_pb2_grpc.EmployeeServiceStub(channel)
 
         # Query an employee's data
-        response = stub.GetEmployeeDataFromID(employee_service_pb2.EmployeeID(id=101))
+        response = stub.GetEmployeeDataFromID(EmployeeService_pb2.EmployeeID(id=101))
         print ('Employee\'s data: ' + str(response))
 
         # Add a new employee
-        response = stub.CreateEmployee(employee_service_pb2.EmployeeData(id=301, name='Jose da Silva', title='Programmer'))
+        response = stub.CreateEmployee(EmployeeService_pb2.EmployeeData(id=301, name='Jose da Silva', title='Programmer'))
         print ('Added new employee ' + response.status)
 
         # Change an employee's title
-        response = stub.UpdateEmployeeTitle(employee_service_pb2.EmployeeTitleUpdate(id=301, title='Senior Programmer'))
+        response = stub.UpdateEmployeeTitle(EmployeeService_pb2.EmployeeTitleUpdate(id=301, title='Senior Programmer'))
         print ('Updated employee ' + response.status)
 
         # Delete an employee
-        response = stub.DeleteEmployee(employee_service_pb2.EmployeeID(id=201))
+        response = stub.DeleteEmployee(EmployeeService_pb2.EmployeeID(id=201))
         print ('Deleted employee ' + response.status)
 
 if __name__ == '__main__':
