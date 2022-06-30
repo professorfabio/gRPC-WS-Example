@@ -16,7 +16,7 @@ empDB=[
  }
  ]
 
-class EmployeeServer(EmployeeService_pb2_grpc.EmployeeServicer):
+class EmployeeServer(EmployeeService_pb2_grpc.EmployeeServiceServicer):
 
   def CreateEmployee(self, request, context):
     dat = {
