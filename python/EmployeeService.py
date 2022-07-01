@@ -46,7 +46,12 @@ class EmployeeServer(EmployeeService_pb2_grpc.EmployeeServiceServicer):
     empDB.remove(usr[0])
     return EmployeeService_pb2.StatusReply(status='OK')
 
-  
+  def ListAllEmployees(self, request, context):
+    list = EmployeeService_pb2.EmployeeDataList()
+    for item in empDB:
+      emp_data = EmployeeService_pb2.EmployeeData(id=item['id'],name=item['name'],title=item['tile']) 
+      ...
+
 def serve():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     EmployeeService_pb2_grpc.add_EmployeeServiceServicer_to_server(EmployeeServer(), server)
