@@ -22,7 +22,7 @@ service EmployeeService {
   rpc DeleteEmployee (EmployeeID) returns (StatusReply) {}
 
   // List all employees
-  rpc ListAllEmployees (EmptyMessage) returns (EmployeeDataList){}
+  rpc ListAllEmployees (EmptyMessage) returns (EmployeeDataList) {}
   
 }
 
