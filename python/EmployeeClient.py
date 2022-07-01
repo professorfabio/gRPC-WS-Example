@@ -28,7 +28,7 @@ def run():
         print ('Deleted employee ' + response.status)
 
         # List all employees
-        response = stub.ListAllEmployess(EmployeeService_pb2.EmptyMessage())
+        response = stub.ListAllEmployees(EmployeeService_pb2.EmptyMessage())
         print ('All employees: ' + str(response))
 
 if __name__ == '__main__':
