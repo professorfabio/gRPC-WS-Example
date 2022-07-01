@@ -27,6 +27,10 @@ def run():
         response = stub.DeleteEmployee(EmployeeService_pb2.EmployeeID(id=201))
         print ('Deleted employee ' + response.status)
 
+        # List all employees
+        response = stub.ListAllEmployess(EmployeeService_pb2.EmptyMessage())
+        print ('All employees: ' + str(response))
+
 if __name__ == '__main__':
     logging.basicConfig()
     run()
