@@ -37,6 +37,6 @@ $:> python3 EmployeeService.py
 
 ### On the second machine:
 
-$:> python3 EmployeeServiceClient.py
+$:> python3 EmployeeClient.py
 
 ### Note: open port 50051 on the firewall at EC2 (security group)
