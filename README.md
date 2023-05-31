@@ -9,21 +9,21 @@ Step-by-step:
 
 $:> sudo apt install python3-pip
 
-# 2) Upgrade PIP
+## 2) Upgrade PIP
 
 $:> python3 -m pip install --upgrade pip
 
-3) Install gRPC runtime
+## 3) Install gRPC runtime
 
 $:> python3 -m pip install grpcio
 
-4) Install gRPC tools
+## 4) Install gRPC tools
 
 $:> python3 -m pip install grpcio-tools
 
-5) Clone this repo
+## 5) Clone this repo
 
-6) Compile interface specification (Protocol Buffers .proto file)
+## 6) Compile interface specification (Protocol Buffers .proto file)
 
 $:> cd python
 
