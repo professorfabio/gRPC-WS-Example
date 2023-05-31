@@ -28,3 +28,15 @@ $:> python3 -m pip install grpcio-tools
 $:> cd python
 
 $:> python3 -m grpc_tools.protoc -I../protos --python_out=. --grpc_python_out=. ../protos/EmployeeService.proto
+
+## 7) Run the example (using two differente machines)
+
+### On the first machine:
+
+$:> python3 EmployeeService.py
+
+### On the second machine:
+
+$:> python3 EmployeeServiceClient.py
+
+### Note: open port 50051 on the firewall at EC2 (security group)
