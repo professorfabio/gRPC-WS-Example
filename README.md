@@ -3,7 +3,7 @@ This is the gRPC equivalent of the RESTful WS example, meant to illustrate the d
 
 See here for instructions on how to install gRPC and compile the interface specification (.proto): https://grpc.io/docs/languages/python/quickstart/
 
-Step-by-step:
+Step-by-step (steps 1-4 on both machines, client and server):
 
 ## 1) Install PIP
 
